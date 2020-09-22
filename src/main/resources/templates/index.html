@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <link th:href="@{/css/masthead.css}" rel="stylesheet">
 </head>
 <body>
-    <div th:insert="fragments/header :: navbar"></div>
+    <div th:insert="fragments/navbar :: navbar"></div>
     <br>
     <div class="container-fluid">
-        <div th:insert="fragments/background :: body"></div>
+        <div th:insert="fragments/masthead :: masthead"></div>
         <div th:insert="fragments/pageContent :: content"></div>
     </div>
 </body>
