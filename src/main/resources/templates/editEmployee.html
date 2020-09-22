@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employees</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="fragments/header :: navbar"></div>
+<br>
+<div class="container">
+    <h2>Edit details of employee</h2>
+</div>
+<div class="container">
+    <form th:action="@{/employee/edit}" method="post">
+        <div class="form-group">
+            <input th:value="${employee.firstName}" class="form-control" type="text"  id="firstName" placeholder="First Name" name="firstName">
+            <br>
+            <input th:value="${employee.lastName}"class="form-control" type="text" id="lastName" placeholder="Last Name" name="lastName">
+            <br>
+            <input class="btn btn-dark" type="submit" value="save">
+        </div>
+    </form>
+</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</html>

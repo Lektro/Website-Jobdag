@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring MVC Hello World</title>
+    <link th:href = "@{/css/bootstrap.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<div th:insert="fragments/header :: navbar"></div>
+<br>
+<div class="container">
+    <h2>All Animals in System</h2>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Animal ID</th>
+            <th scope="col">Animal Name</th>
+            <th scope="col">Species</th>
+            <th scope="col">Food Type</th>
+        </tr>
+        </thead>
+        <tr th:each="animal : ${animals}">
+            <td th:text="${{animal.id}}">ID</td>
+            <td th:text="${{animal.animalName}}">Name</td>
+            <td th:text="${{animal.species}}">Species</td>
+            <td th:text="${{animal.foodType}}">Food Type</td>
+<!--            <td>
+                <a class="btn btn-secondary" type="button" th:href="@{/employee/{id}/edit(id=${employee.id})}">edit</a>
+                <a class="btn btn-warning" type="button" th:href="@{/employee/{id}/delete(id=${employee.id})}">delete</a>
+            </td>-->
+        </tr>
+    </table>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+            <a class="btn btn-dark" href="/animal/add" role="button">Add Animal</a>
+    </div>
+    <br>
+    <div class="row">
+        <a class="btn btn-dark" href="/">Home</a>
+    </div>
+</div>
+
+</body>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</html>

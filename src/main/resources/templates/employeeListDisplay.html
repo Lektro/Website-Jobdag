@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring MVC Hello World</title>
+    <link th:href = "@{/css/bootstrap.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<div th:insert="fragments/header :: navbar"></div>
+<br>
+<div class="container">
+    <h2>All Employees in System</h2>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${{employee.id}}">ID</td>
+            <td th:text="${{employee.firstName}}">first name</td>
+            <td th:text="${{employee.lastName}}">last name</td>
+            <td>
+                <a class="btn btn-secondary" type="button" th:href="@{/employee/{id}/edit(id=${employee.id})}">edit</a>
+                <a class="btn btn-warning" type="button" th:href="@{/employee/{id}/delete(id=${employee.id})}">delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+            <a class="btn btn-dark" href="/employee/add" role="button">Add Employee</a>
+    </div>
+    <br>
+    <div class="row">
+        <a class="btn btn-dark" href="/">Home</a>
+    </div>
+</div>
+
+</body>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</html>

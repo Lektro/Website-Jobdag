@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+    <div th:insert="fragments/header :: navbar"></div>
+    <br>
+
+    <div class="container-fluid">
+        <div class="card text-center">
+            <div class="card-header">Human Resources</div>
+            <div class="card-body">
+                <h5 class="card-title">Employees</h5>
+                <p class="card-text">Here you can add or delete employees</p>
+                <a href="/employee/getAllEmployees" class="btn btn-dark">Show All Employees</a>
+            </div>
+        </div>
+        <br>
+        <div class="card text-center">
+            <div class="card-header">Animal Resources</div>
+            <div class="card-body">
+                <h5 class="card-title">Animals</h5>
+                <p class="card-text">Here you can add or delete animals</p>
+                <a href="/animal/getAllAnimals" class="btn btn-dark">Show All Animals</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</html>
