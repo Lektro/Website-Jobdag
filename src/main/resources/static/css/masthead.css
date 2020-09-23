@@ -45,8 +45,14 @@ p.lead {
     padding: 40px;
 }
 
-body {
-  overflow-x:hidden;
+/** delete scrollbar *//
+html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/** delete scrollbar *//
+html::-webkit-scrollbar {
+    display: none;
 }
 
 .scroll-down {
