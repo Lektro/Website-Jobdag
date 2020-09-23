@@ -6,23 +6,31 @@
     background-repeat: no-repeat;
 }
 
-h1 {
-    color: black;
+#mastheadH1 {
+    color: white;
+}
+
+.boxed {
+    background: grey;
 }
 
 p.lead {
-    color: black;
+    color: white;
+}
+p.spacing {
+    color: grey;
 }
 
 .bgimg {
     height: 100%;
-    background-image: url("/images/three.jpg");
+    background-image: url("/images/pexelsOne.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     margin-left:-20px;
     margin-right:-20px;
+
 }
 
 .landing {
