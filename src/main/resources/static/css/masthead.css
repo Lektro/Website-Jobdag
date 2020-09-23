@@ -45,14 +45,12 @@ p.lead {
     padding: 40px;
 }
 
-/** delete scrollbar *//
-html, body {
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-}
-/** delete scrollbar *//
-html::-webkit-scrollbar {
-    display: none;
 }
 
 .scroll-down {
