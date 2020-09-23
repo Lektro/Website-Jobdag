@@ -44,13 +44,16 @@ p.lead {
 .landing {
     padding: 40px;
 }
-
+/** delete scrollbar */
 html::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome */
+  overflow-y: scroll;
 }
+/** delete scrollbar */
 html {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
 }
 
 .scroll-down {
