@@ -6,17 +6,17 @@
     background-repeat: no-repeat;
 }
 
-h1.font-weight-light {
-    color: orange;
+h1 {
+    color: black;
 }
 
 p.lead {
-    color: white;
+    color: black;
 }
 
 .bgimg {
     height: 100%;
-    background-image: url("/images/abstract.jpg");
+    background-image: url("/images/three.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
