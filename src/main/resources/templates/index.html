@@ -19,6 +19,7 @@
         <br>
         <div th:insert="fragments/pageContent3 :: content"></div>
         <div th:insert="fragments/countdown :: countdown"></div>
+        <div th:insert="fragments/voordelen :: voordelen"></div>
         <div th:insert="fragments/contact :: contact"></div>
     </div>
     <div th:insert="fragments/footer :: footer"></div>
@@ -26,5 +27,6 @@
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script th:src="@{/js/bootstrap.js}"></script>
+    <script th:src="@{/js/masthead.js}"></script>
     <script th:src="@{/js/countdown.js}"></script>
 </html>
