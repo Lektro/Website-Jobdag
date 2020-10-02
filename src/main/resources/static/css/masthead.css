@@ -12,7 +12,8 @@
 
 .boxed {
     /* background color */
-     background: rgb(41, 43, 44);
+     background: rgba(41, 43, 44, 0.9);
+
     /* background: white; */
 
     /* border */
